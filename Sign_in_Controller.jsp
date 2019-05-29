@@ -11,11 +11,10 @@
 </head>
 <body>
 	<%
-		String access_token = (String) request.getParameter("access_token");
-		Server profile_Modal = new Server();
-		User User = profile_Modal.call_me(access_token);
+		String access_token = (String) request.getParameter("access_token");  
+		Server profile_user = new Server();
+		User User = profile_user.call_me(access_token);
 	%>
-
 	Name :
 	<%=User.getUser_name()%><br> Email :
 	<%=User.getEmail()%><br> id :
